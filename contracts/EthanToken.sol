@@ -12,8 +12,8 @@ contract EthanToken is ERC20, ERC20Burnable, Pausable, Ownable {
     uint256 private _totalSupplyHardLimit;
 
     constructor() ERC20("EthanToken", "ethw") {
-        // Set total suply hard limit to 1 billion. Not possible to mint more than this number.
-        _totalSupplyHardLimit = 1000000000;
+        // Set total suply hard limit to 1 billion token. Not possible to mint more than this number.
+        _totalSupplyHardLimit = 1000000000*1e18;
     }
 
     function pause() public onlyOwner {
